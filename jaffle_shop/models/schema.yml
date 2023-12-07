@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: taux_effort_SAT
+    columns:
+      - name: total
+        tests:
+          - not_null
+
+  - name: taux_effort_SAT_last_month
+    columns:
+      - name: total
+        tests:
+          - not_null
+      - name: date
+        tests:
+          - not_null
+          - relationships:
+              to: ref('taux_effort_SAT')
+              field: date
