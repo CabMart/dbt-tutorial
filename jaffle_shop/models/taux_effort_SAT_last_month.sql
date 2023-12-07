@@ -1,0 +1,1 @@
+SELECT * FROM {{ ref('taux_effort_SAT') }} WHERE date = "2023-10-01"
