@@ -1,0 +1,13 @@
+jaffle_shop : 
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: ./service_account.json
+      project: engie-b2c-cloud
+      dataset: x_mca_tests
+      threads: 1
+      timeout_seconds: 300
+      location: EU
+      priority: interactive   
